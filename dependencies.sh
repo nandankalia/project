@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install python3-pip python3-dev nginx
+sudo apt install python3-pip python3-dev nginx -y
 sudo pip3 install virtualenv
 virtualenv env
 source env/bin/activate
