@@ -50,7 +50,7 @@ echo "server {
 sudo ln -s /etc/nginx/sites-available/dell /etc/nginx/sites-enabled/
 sudo rm /etc/nginx/sites-enabled/default
 sudo systemctl restart nginx
-sudo systemctl restart gunicorn
+
 
 
  
