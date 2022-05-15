@@ -19,8 +19,8 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/projectdir
-ExecStart=/home/ubuntu/projectdir/env/bin/gunicorn \
+WorkingDirectory=/home/ubuntu
+ExecStart=/home/ubuntu/env/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
@@ -34,11 +34,11 @@ sudo systemctl enable gunicorn.socket
 
 echo "server {
     listen 80;
-    server_name ;
+    server_name 3.110.163.244;
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
-        root /home/ubuntu/projectdir;
+        root /home/ubuntu;
     }
 
     location / {
